@@ -9,11 +9,11 @@ WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 
 void setup() {
-  connectToWifi(ssid, wifiPassword);
-  mqttClient.setServer(mqttHostname, 1883);
-
   Serial.begin(115200);
   Serial.println();
+
+  connectToWifi(ssid, wifiPassword);
+  mqttClient.setServer(mqttHostname, 1883);
 
   ArduinoOTA.setHostname(ostHostname);
   ArduinoOTA.setPassword(ostPassword);
