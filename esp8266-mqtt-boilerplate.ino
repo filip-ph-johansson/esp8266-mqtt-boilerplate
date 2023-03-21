@@ -66,16 +66,16 @@ void loop() {
 }
 
 void connectToWifi(char ssid[], char password[]) {
+  Serial.println("Attempting WiFI connection...");
+  
   WiFi.begin(ssid, password);
-
-  Serial.println("Connecting");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-  Serial.println();
 
-  Serial.print("Connected");
+  Serial.println();
+  Serial.println("Connected");
 }
 
 void callback(char topic[], byte *payload, unsigned int length) {
