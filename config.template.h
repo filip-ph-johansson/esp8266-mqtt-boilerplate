@@ -5,5 +5,5 @@ char mqttPassword[] = "password";
 char mqttTopic[] = "topic";
 char mqttHostname[] = "hostname";
 char mqttClientName[] = "esp8266-mqtt-boilerplate";
-char ostHostname[] = "esp8266-mqtt-boilerplate";
-char ostPassword[] = "password";
+char otaHostname[] = "esp8266-mqtt-boilerplate";
+char otaPassword[] = "password";

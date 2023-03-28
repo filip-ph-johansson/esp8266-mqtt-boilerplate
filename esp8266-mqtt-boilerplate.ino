@@ -15,8 +15,8 @@ void setup() {
   connectToWifi(ssid, wifiPassword);
   mqttClient.setServer(mqttHostname, 1883);
 
-  ArduinoOTA.setHostname(ostHostname);
-  ArduinoOTA.setPassword(ostPassword);
+  ArduinoOTA.setHostname(otaHostname);
+  ArduinoOTA.setPassword(otaPassword);
 
   ArduinoOTA.onStart([]() {
     String type;
