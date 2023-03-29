@@ -13,7 +13,7 @@ void setup() {
   Serial.println();
 
   connectToWifi(ssid, wifiPassword);
-  mqttClient.setServer(mqttHostname, 1883);
+  mqttClient.setServer(mqttHostname, mqttPort);
 
   ArduinoOTA.setHostname(otaHostname);
   ArduinoOTA.setPassword(otaPassword);
@@ -103,7 +103,7 @@ void connectToMqtt() {
     if (mqttClient.connect(mqttClientName, mqttUsername, mqttPassword)) {
       Serial.println("connected");
 
-      mqttClient.subscribe(mqttTopic);
+      mqttClient.subscribe("#");
       mqttClient.setCallback(callback);
     } else {
       Serial.print("failed, rc=");
